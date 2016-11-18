@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
+</head>
+<style type="text/css">
+iframe.heroVideo {
+    width: 300px;
+    height: 300px;
+    border: 3px solid #4cda4c;
+}
+img.heroPic {
+    width: 300px;
+    height: 300px;
+    border: 3px solid #4cda4c;
+}
+
+</style>
+<body>
+	<div class="container" style="padding-top: 40px">
+		<div class="row">
+			<div class="col-md-4 classicColumn">
+				<h2 class="realNameFrank hidden">Frank Castle</h2>
+				<h2 class="heroNamePunisher">The Punisher</h2>
+				<img class="thePunisher heroPic" src="http://vignette1.wikia.nocookie.net/marveldatabase/images/4/45/General_Castle.jpg/revision/latest?cb=20110404055041"></img>
+				<iframe  class="thePunisher hidden heroVideo" width="854" height="480" src="https://www.youtube.com/embed/cXKOHhSz8-U" frameborder="0" allowfullscreen></iframe>
+				
+				<input class="heroInput" data-toggle="toggle" id="thePunisher" type="checkbox">
+			</div>
+			<div class="col-md-4 classicColumn">
+				<h2 class="realNameJames hidden">James Howlett</h2>
+				<h2 class="heroNameWolverine">Wolverine</h2>
+				<img class="wolverine heroPic" src="http://24.media.tumblr.com/tumblr_lb6evpB2yq1qc882do1_500.jpg"></img>
+				<iframe class="wolverine hidden heroVideo" width="640" height="360" src="https://www.youtube.com/embed/VagrTsi5vsw" frameborder="0" allowfullscreen></iframe>
+				
+				<input class="heroInput" data-toggle="toggle" id="wolverine" type="checkbox">
+			</div>
+			<div class="col-md-4 classicColumn">
+				<h2 class="realNameEric hidden">Eric Brooks</h2>
+				<h2 class="heroNameBlade">Blade</h2>
+				<img class="blade heroPic" src="http://www.comingsoon.net/nextraimages/mainVisual.jpg"></img>
+				<iframe class="blade hidden heroVideo" width="1366" height="768" src="https://www.youtube.com/embed/yJt2N7LSptg" frameborder="0" allowfullscreen></iframe>
+				
+				<input class="heroInput" data-toggle="toggle" id="blade" type="checkbox">
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+
+$( ".heroInput" ).change(function() {
+	var theClassToLocate = this.id;
+	console.log("the id of the on/off switch just clicked is --- " + theClassToLocate);
+	$('.'+theClassToLocate).toggleClass( "hidden" );
+  });
+
+
+
+
+</script>
+</body>
+</html>
